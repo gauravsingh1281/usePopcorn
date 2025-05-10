@@ -1,10 +1,10 @@
 import MovieListContainer from "./MovieListContainer";
 import WatchedMovieListContainer from "./WatchedMovieListContainer";
 
-export default function Main() {
+export default function Main({ movies }) {
   return (
     <main className="main">
-      <MovieListContainer />
+      <MovieListContainer movies={movies} />
       <WatchedMovieListContainer />
     </main>
   );
