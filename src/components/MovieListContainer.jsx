@@ -1,12 +1,12 @@
 import { useState } from "react";
-export default function MovieListContainer({ element }) {
+export default function MovieListContainer({ children }) {
   const [isOpen, setIsOpen] = useState(true);
   return (
     <div className="box">
       <button className="btn-toggle" onClick={() => setIsOpen((open) => !open)}>
         {isOpen ? "–" : "+"}
       </button>
-      {isOpen && element}
+      {isOpen && children}
     </div>
   );
 }
